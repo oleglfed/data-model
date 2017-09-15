@@ -6,7 +6,7 @@
 Require this package with composer using the following command:
 
 ```sh
-$ composer require oleglfed/data-model
+$ composer require oleglfed/laravel-data-model
 ```
 
 Go to your `config/app.php` and add the service provider:
