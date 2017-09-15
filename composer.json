@@ -1,0 +1,25 @@
+{
+    "name": "oleglfed/laravel-data-model",
+    "description": "Generates data model document for laravel eloquent",
+    "keywords": [
+    ],
+    "minimum-stability": "stable",
+    "homepage": "https://github.com/oleglfed/data-model",
+    "authors": [
+        {
+            "name": "Oleg Fedoliak",
+            "email": "oleg.fedoliak@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "oleglfed\\DataModel\\": "src/"
+        }
+    }
+}
