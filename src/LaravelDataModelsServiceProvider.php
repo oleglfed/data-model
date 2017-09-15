@@ -3,7 +3,7 @@
 namespace oleglfed\DataModel;
 
 use Illuminate\Support\ServiceProvider;
-use oleglfed\DataModel\Commands\GenerateDomain;
+use oleglfed\DataModel\Commands\GenerateDoc;
 
 class LaravelDataModelsServiceProvider extends ServiceProvider
 {
@@ -26,7 +26,7 @@ class LaravelDataModelsServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->commands([
-                GenerateDomain::class,
+                GenerateDoc::class,
             ]);
         }
     }

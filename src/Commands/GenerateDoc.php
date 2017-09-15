@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Symfony\Component\Finder\Finder;
 
-class GenerateDomain extends Command
+class GenerateDoc extends Command
 {
     /**
      * The name and signature of the console command.
@@ -110,10 +110,12 @@ class GenerateDomain extends Command
      */
     public function getDataModel($class)
     {
-        //$class::getTable();
-        $dbFields = $this->parseDbTable($class::TABLE_NAME);
-        view()->addLocation(__DIR__ . '/../../resources');
-        return view('table', ['fields' => $dbFields, 'title' => $class])->render();
+        if (defined("$class::TABLE_NAME")) {
+            $dbFields = $this->parseDbTable($class::TABLE_NAME);
+            view()->addLocation(__DIR__ . '/../../resources');
+            $title = explode('\\', $class);
+            return view('table', ['fields' => $dbFields, 'title' => str_replace('Eloquent', '', end($title))])->render();
+        }
     }
 
     /**

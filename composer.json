@@ -3,7 +3,7 @@
     "description": "Generates data model document for laravel eloquent",
     "keywords": [
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "homepage": "https://github.com/oleglfed/data-model",
     "authors": [
         {
